@@ -1,0 +1,21 @@
+{
+  "timeZone": "en-US",
+  "rotateProxy": false,
+  "skipInvalidProxy": false,
+  "proxyRotationInterval": 2,
+  "delayEachAccount": [3, 12],
+  "timeToRestartAllAccounts": 300,
+  "howManyAccountsRunInOneTime": 10,
+  "doTasks": true,
+  "playGames": true,
+  "walletFeatures": {
+    "connectWallet": false,
+    "activate": false
+  },
+  "upgradeBuildings": true,
+  "maxBuildingUgradePrice": 500000,
+  "doLessions": true,
+  "doBattle": true,
+  "howManyBattle": 100,
+  "howManyPercentOfCoinsToStake": 10
+}
