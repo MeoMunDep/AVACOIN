@@ -1,5 +1,5 @@
 @echo off
-title name Bot
+title Avacoin Bot
 color 0A
 
 cd ..
@@ -14,7 +14,7 @@ if exist node_modules (
 :MENU
 cls
 echo =================================================================
-echo    name BOT SETUP AND RUN SCRIPT
+echo    Avacoin BOT SETUP AND RUN SCRIPT
 echo =================================================================
 echo.
 echo Current directory: %CD%
@@ -59,15 +59,26 @@ if not exist configs.json (
     echo   "rotateProxy": false,>> configs.json
     echo   "skipInvalidProxy": false,>> configs.json
     echo   "proxyRotationInterval": 2,>> configs.json
-    echo   "delayEachAccount": [5, 8],>> configs.json
+    echo   "delayEachAccount": [3, 12],>> configs.json
     echo   "timeToRestartAllAccounts": 300,>> configs.json
-    echo   "howManyAccountsRunInOneTime": 100,>> configs.json
+    echo   "howManyAccountsRunInOneTime": 10,>> configs.json
     echo   "doTasks": true,>> configs.json
     echo   "playGames": true,>> configs.json
-    echo   "referralCode": "">> configs.json
+    echo   "walletFeatures": {>> configs.json
+    echo     "connectWallet": false,>> configs.json
+    echo     "activate": false>> configs.json
+    echo   },>> configs.json
+    echo   "upgradeBuildings": true,>> configs.json
+    echo   "maxBuildingUgradePrice": 500000,>> configs.json
+    echo   "doLessions": true,>> configs.json
+    echo   "doBattle": true,>> configs.json
+    echo   "howManyBattle": 100,>> configs.json
+    echo   "howManyPercentOfCoinsToStake": 10>> configs.json
     echo }>> configs.json
     echo Created configs.json
 )
+
+
 
 if not exist datas.txt (
     type nul > datas.txt
@@ -97,7 +108,7 @@ if exist "..\node_modules" (
 ) else (
     echo Using node_modules from current directory
 )
-node bot
+cd Avacoin && node bot
 pause
 goto MENU
 
