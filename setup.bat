@@ -108,7 +108,7 @@ if exist "..\node_modules" (
 ) else (
     echo Using node_modules from current directory
 )
-cd Avacoin && node bot
+node meomundep
 pause
 goto MENU
 
